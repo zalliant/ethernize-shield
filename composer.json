@@ -1,0 +1,39 @@
+{
+    "name": "zalliant/ethernize-shield",
+    "description": "Shield: authentication, authorization, CSRF protection and secure sessions for Zalliant Ethernize.",
+    "type": "library",
+    "keywords": [
+        "ethernize",
+        "php",
+        "framework"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "ext-hash": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "zalliant/ethernize-core": "^0.1.0-beta.1"
+    },
+    "suggest": {
+        "zalliant/ethernize-pulse": "Authorization of Pulse actions (#[Action(authorize: '...')])",
+        "zalliant/ethernize-strata": "Loading users from a database table",
+        "zalliant/ethernize-weave": "The <CsrfField /> and <CsrfMeta /> tags"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ethernize\\Shield\\": "src/"
+        }
+    },
+    "archive": {
+        "exclude": [
+            "/tests",
+            "/.gitattributes"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.1.x-dev"
+        }
+    }
+}
