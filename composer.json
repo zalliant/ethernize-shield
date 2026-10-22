@@ -13,7 +13,7 @@
         "ext-hash": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
-        "zalliant/ethernize-core": "^0.1.0-beta.2"
+        "zalliant/ethernize-core": "^0.1.0-beta.3"
     },
     "suggest": {
         "zalliant/ethernize-pulse": "Authorization of Pulse actions (#[Action(authorize: '...')])",
