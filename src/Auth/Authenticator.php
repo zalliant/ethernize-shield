@@ -101,6 +101,9 @@ final class Authenticator
 
         if ($this->hasher->needsRehash($hash) && $this->users instanceof UpdatesPasswordHash) {
             $this->users->updatePasswordHash($identity, $this->hasher->hash($password));
+            // The session is bound to the stored hash: sign in the identity as it is stored now, or the very
+            // next request would find a different hash and end this session.
+            $identity = $this->users->byIdentifier($identity->identifier()) ?? $identity;
         }
 
         $this->login($identity);
